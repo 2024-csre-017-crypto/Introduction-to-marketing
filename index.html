@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Ch 1: Creating Customer Value & Engagement</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN for Modern Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>MKTG 101 <small>Kotler & Armstrong</small></span>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#overview"><i class="fa-solid fa-grid-2"></i> Overview</a>
+                <a href="#demands"><i class="fa-solid fa-sliders"></i> Demands</a>
+                <a href="#process"><i class="fa-solid fa-diagram-next"></i> Process</a>
+                <a href="#orientations"><i class="fa-solid fa-compass"></i> Orientations</a>
+                <a href="#crm"><i class="fa-solid fa-users-gear"></i> CRM</a>
+                <a href="#simulations"><i class="fa-solid fa-film"></i> Animations</a>
+                <a href="#cases"><i class="fa-solid fa-briefcase"></i> Cases</a>
+                <a href="#flashcards"><i class="fa-solid fa-clone"></i> Flashcards</a>
+                <a href="#quiz"><i class="fa-solid fa-pen-to-square"></i> Quiz</a>
+                <a href="#glossary"><i class="fa-solid fa-book"></i> Glossary</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="btn-icon" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="progress-circle-container" title="Overall Chapter Progress">
+                    <svg class="progress-ring" width="40" height="40">
+                        <circle class="progress-ring__circle-bg" stroke="#1e293b" stroke-width="4" fill="transparent" r="16" cx="20" cy="20"/>
+                        <circle class="progress-ring__circle" stroke="#3b82f6" stroke-width="4" fill="transparent" r="16" cx="20" cy="20"/>
+                    </svg>
+                    <span id="overallProgressText">0%</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Global Progress Bar -->
+    <div class="progress-bar-container">
+        <div id="globalProgressBar" class="progress-bar-fill"></div>
+    </div>
+
+    <main class="main-content">
+
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <span class="badge">Computer Science Applications • Kotler & Armstrong</span>
+                <h1>MARKETING: Chapter 1</h1>
+                <h2>Creating Customer Value & Engagement</h2>
+                <p class="hero-subtitle">
+                    "Understanding customers, creating value, building relationships, and capturing customer value in return."
+                </p>
+                <div class="hero-actions">
+                    <a href="#process" class="btn btn-primary"><i class="fa-solid fa-play"></i> Start Learning</a>
+                    <a href="#overview" class="btn btn-secondary"><i class="fa-solid fa-compass"></i> Explore Topics</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div><strong id="completedTopics">0 / 33</strong><span>Topics Read</span></div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-solid fa-check-double"></i>
+                        <div><strong id="quizScoreDisplay">0%</strong><span>Quiz Score</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CHAPTER OVERVIEW -->
+        <section id="overview" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-cubes"></i> Chapter Overview</h2>
+                <p>Explore core concepts covered in Chapter 1. Click any card to jump directly to details.</p>
+            </div>
+            <div class="overview-grid" id="overviewGrid">
+                <!-- Overview Cards dynamically inserted or hardcoded -->
+            </div>
+        </section>
+
+        <!-- 3. VALUE OF MARKETING -->
+        <section id="value-marketing" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-chart-line"></i> Value of Marketing</h2>
+                <p>Why marketing matters to business functions and society as a whole.</p>
+            </div>
+            <div class="grid-2">
+                <div class="card card-glass">
+                    <h3>Core Business & Social Value</h3>
+                    <ul class="styled-list">
+                        <li><strong>Creates Demand:</strong> Finance, operations, and accounting won't matter without sufficient product demand[cite: 1].</li>
+                        <li><strong>Drives Financial Success:</strong> Profitability stems from sustained market demand[cite: 1].</li>
+                        <li><strong>Societal Impact:</strong> Increases living standards, creates employment opportunities, and expands production[cite: 1].</li>
+                        <li><strong>Social Needs Profitably:</strong> Marketing identifies and meets social needs profitably[cite: 1].</li>
+                    </ul>
+                    <blockquote class="case-quote">
+                        <strong>Real-World Example (Google):</strong> People wanted quick, reliable access to information; Google identified this social need and created Google Search[cite: 1].
+                    </blockquote>
+                </div>
+                <div class="card card-glass">
+                    <h3>Value Creation Flow</h3>
+                    <div class="flow-chart">
+                        <div class="flow-step">1. Customer Need</div>
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="flow-step">2. Market Research</div>
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="flow-step">3. Product / Service Offering</div>
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="flow-step">4. Customer Value Creation</div>
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="flow-step highlight">5. Sustained Business Value</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SELLING VS MARKETING (ICEBERG) -->
+        <section id="selling-vs-marketing" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-icicles"></i> Selling vs. Marketing</h2>
+                <p>Selling is merely the tip of the marketing iceberg[cite: 1]. Click components of the iceberg to reveal details.</p>
+            </div>
+            <div class="iceberg-container">
+                <div class="iceberg-visual">
+                    <div class="iceberg-waterline"><span>WATER LINE</span></div>
+                    <div class="iceberg-tip interactive-part" data-info="Selling is a narrow concept focused on existing products and heavy promotion to drive immediate sales volume[cite: 1].">
+                        <i class="fa-solid fa-sack-dollar"></i> SELLING (Tip of Iceberg)
+                    </div>
+                    <div class="iceberg-underwater">
+                        <div class="interactive-part" data-info="Customer Needs: Understanding deep consumer pain points and desires[cite: 1].">1. Customer Needs Research</div>
+                        <div class="interactive-part" data-info="Value Creation: Designing superior market offerings[cite: 1].">2. Value Creation & Strategy</div>
+                        <div class="interactive-part" data-info="Integrated 4Ps: Product, Price, Place, Promotion alignment[cite: 1].">3. Integrated Marketing Program</div>
+                        <div class="interactive-part" data-info="Relationships: Building strong customer engagement & delight[cite: 1].">4. Relationship Building</div>
+                        <div class="interactive-part" data-info="Satisfaction: Delivering experiences that match or exceed expectations[cite: 1].">5. Long-term Customer Equity</div>
+                    </div>
+                </div>
+                <div class="iceberg-details card card-glass" id="icebergDetailBox">
+                    <i class="fa-solid fa-hand-pointer"></i> Click any element of the iceberg to inspect its underlying role in marketing strategy.
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. WHAT IS MARKETED? -->
+        <section id="what-is-marketed" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-box-open"></i> What Is Marketed?</h2>
+                <p>10 distinct entities that marketers bring to the marketplace[cite: 1].</p>
+            </div>
+            <div class="grid-3" id="entitiesGrid">
+                <!-- Dynamically populated via script -->
+            </div>
+        </section>
+
+        <!-- 6. WHO IS A MARKETER? -->
+        <section id="marketer-prospect" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-user-tie"></i> Who Is a Marketer?</h2>
+                <p>Understanding marketers, prospects, and mutual exchange[cite: 1].</p>
+            </div>
+            <div class="grid-2">
+                <div class="card card-glass">
+                    <h3>Definitions & Concepts</h3>
+                    <p>A <strong>Marketer</strong> is someone who seeks a response (attention, purchase, vote, or donation) from another party called the <strong>Prospect</strong>[cite: 1].</p>
+                    <p>If two parties are actively seeking to sell something to each other, both are considered <strong>marketers</strong>[cite: 1].</p>
+                </div>
+                <div class="card card-glass">
+                    <h3>Response Stimulus Cycle</h3>
+                    <div class="sim-box">
+                        <div class="sim-node">Marketer</div>
+                        <div class="sim-arrow">Stimulates Demand <i class="fa-solid fa-right-long"></i></div>
+                        <div class="sim-node">Prospect</div>
+                        <div class="sim-arrow"><i class="fa-solid fa-left-long"></i> Desired Response</div>
+                    </div>
+                    <div class="response-chips">
+                        <span class="chip"><i class="fa-solid fa-eye"></i> Attention</span>
+                        <span class="chip"><i class="fa-solid fa-cart-shopping"></i> Purchase</span>
+                        <span class="chip"><i class="fa-solid fa-check-to-slot"></i> Vote</span>
+                        <span class="chip"><i class="fa-solid fa-hand-holding-dollar"></i> Donation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. TYPES OF DEMAND SIMULATOR -->
+        <section id="demands" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-sliders"></i> Interactive Demand Simulator</h2>
+                <p>Explore the 8 types of demand states and appropriate marketing strategies[cite: 1].</p>
+            </div>
+            <div class="simulator-layout">
+                <div class="sim-tabs" id="demandTabs">
+                    <!-- Demand type buttons inserted here -->
+                </div>
+                <div class="sim-display card card-glass" id="demandDisplay">
+                    <!-- Dynamic Demand Details -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. MARKETS & ECOSYSTEM -->
+        <section id="markets" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-network-wired"></i> Basic Markets Ecosystem</h2>
+                <p>How money, resources, goods, and services flow across economy-wide markets[cite: 1].</p>
+            </div>
+            <div class="market-ecosystem card card-glass">
+                <div class="ecosystem-grid">
+                    <div class="eco-box eco-resource">
+                        <i class="fa-solid fa-tree"></i>
+                        <h4>Resource Markets</h4>
+                        <small>Raw Materials & Labor</small>
+                    </div>
+                    <div class="eco-box eco-govt">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h4>Government Markets</h4>
+                        <small>Public Services & Taxes</small>
+                    </div>
+                    <div class="eco-box eco-mfg">
+                        <i class="fa-solid fa-industry"></i>
+                        <h4>Manufacturer Markets</h4>
+                        <small>Production of Goods</small>
+                    </div>
+                    <div class="eco-box eco-inter">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        <h4>Intermediary Markets</h4>
+                        <small>Wholesalers & Retailers</small>
+                    </div>
+                    <div class="eco-box eco-consumer">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>Consumer Markets</h4>
+                        <small>Final End Users</small>
+                    </div>
+                </div>
+                <div class="eco-flow-info card">
+                    <i class="fa-solid fa-circle-info"></i> <strong>Flow Explanation:</strong> Resource markets supply materials to manufacturers; manufacturers supply intermediaries who distribute to consumer markets[cite: 1]. Government markets collect taxes and provide public services across all sectors[cite: 1].
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. WHAT IS MARKETING? DEFINITION -->
+        <section id="definition" class="section">
+            <div class="hero-card card-gradient">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <h2>Broad Definition of Marketing</h2>
+                <p class="highlight-text">
+                    "Marketing is engaging customers and managing profitable customer relationships. It is the process by which companies engage customers, build strong customer relationships, and create customer value in order to capture value from customers in return."[cite: 1]
+                </p>
+            </div>
+        </section>
+
+        <!-- 10. FIVE-STEP MARKETING PROCESS -->
+        <section id="process" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-diagram-next"></i> The 5-Step Marketing Process</h2>
+                <p>Steps 1–4 create value for customers; Step 5 captures value in return[cite: 1]. Click any step to inspect details.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-steps" id="processTimeline">
+                    <!-- Interactive steps inserted via script -->
+                </div>
+                <div class="timeline-card card card-glass" id="processDetail">
+                    <!-- Dynamic details inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. NEEDS, WANTS & DEMANDS -->
+        <section id="needs-wants-demands" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-layer-group"></i> Needs, Wants & Demands</h2>
+                <p>The core building blocks of customer motivation[cite: 1].</p>
+            </div>
+            <div class="grid-3">
+                <div class="card card-glass">
+                    <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Needs</h3>
+                    <p>States of felt deprivation (e.g., physical food, clothing, warmth, safety)[cite: 1].</p>
+                </div>
+                <div class="card card-glass">
+                    <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Wants</h3>
+                    <p>The form human needs take as they are shaped by culture and individual personality (e.g., wanting a Burger)[cite: 1].</p>
+                </div>
+                <div class="card card-glass">
+                    <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <h3>Demands</h3>
+                    <p>Human wants that are backed by purchasing power[cite: 1].</p>
+                </div>
+            </div>
+            <div class="transformation-bar card card-glass">
+                <span><strong>Transformation Flow:</strong> Physical Hunger (Need) <i class="fa-solid fa-arrow-right"></i> Craving Pizza (Want) <i class="fa-solid fa-arrow-right"></i> Purchasing with Money (Demand)</span>
+            </div>
+        </section>
+
+        <!-- 13 & 14. MARKET OFFERINGS & MARKETING MYOPIA -->
+        <section id="myopia" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-eye-low-vision"></i> Market Offerings & Marketing Myopia</h2>
+                <p>Avoiding the dangerous trap of product-centric thinking[cite: 1].</p>
+            </div>
+            <div class="grid-2">
+                <div class="card card-glass danger-border">
+                    <h3><i class="fa-solid fa-circle-xmark"></i> Marketing Myopia (Product-Focused)</h3>
+                    <p>The mistake of paying more attention to the specific products a company offers than to the benefits and experiences produced[cite: 1].</p>
+                    <p><em>Example:</em> Focusing on manufacturing better drill bits instead of understanding the customer's true need for a hole in the wall[cite: 1].</p>
+                </div>
+                <div class="card card-glass success-border">
+                    <h3><i class="fa-solid fa-circle-check"></i> Customer-Need-Focused Thinking</h3>
+                    <p>Focusing on underlying customer needs, overall satisfaction, and continuous value creation[cite: 1].</p>
+                    <p><em>Example:</em> Providing efficient home improvement solutions that fulfill the broader experience requirement[cite: 1].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 17. MARKETING MANAGEMENT ORIENTATIONS -->
+        <section id="orientations" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-compass"></i> 5 Marketing Management Orientations</h2>
+                <p>Alternative philosophies under which organizations design and carry out marketing strategies[cite: 1].</p>
+            </div>
+            <div class="orientations-wrapper">
+                <div class="orientations-nav" id="orientationsNav">
+                    <!-- Dynamic Buttons -->
+                </div>
+                <div class="card card-glass" id="orientationCard">
+                    <!-- Dynamic orientation details -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 18, 19, 20. CRM, VALUE & SATISFACTION METER -->
+        <section id="crm" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-users-gear"></i> CRM, Perceived Value & Satisfaction</h2>
+                <p>Building profitable relationships through value delivery[cite: 1].</p>
+            </div>
+            <div class="grid-2">
+                <div class="card card-glass">
+                    <h3><i class="fa-solid fa-calculator"></i> Customer-Perceived Value</h3>
+                    <p>The evaluation of the difference between all benefits and all costs of an offer relative to competitors[cite: 1].</p>
+                    <div class="interactive-calculator">
+                        <label>Perceived Benefits: <span id="benefitVal">80</span></label>
+                        <input type="range" id="benefitInput" min="10" max="100" value="80">
+                        
+                        <label>Perceived Costs: <span id="costVal">30</span></label>
+                        <input type="range" id="costInput" min="10" max="100" value="30">
+                        
+                        <div class="calc-result">
+                            Net Perceived Value: <strong id="netValueDisplay">50</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-glass">
+                    <h3><i class="fa-solid fa-gauge"></i> Customer Satisfaction Meter</h3>
+                    <p>The extent to which perceived performance matches customer expectations[cite: 1].</p>
+                    <div class="satisfaction-sim">
+                        <label>Customer Expectations: <span id="expVal">50</span></label>
+                        <input type="range" id="expInput" min="0" max="100" value="50">
+                        
+                        <label>Product Performance: <span id="perfVal">50</span></label>
+                        <input type="range" id="perfInput" min="0" max="100" value="50">
+                        
+                        <div id="satisfactionStatus" class="status-badge status-neutral">
+                            Meets Expectations (Satisfied)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 24. CAPTURING VALUE & RELATIONSHIP MATRIX -->
+        <section id="capturing-value" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-chart-pie"></i> Customer Relationship Groups</h2>
+                <p>Classifying customers by potential profitability and projected loyalty[cite: 1].</p>
+            </div>
+            <div class="matrix-grid">
+                <div class="matrix-card butterfly">
+                    <h4>Butterflies</h4>
+                    <small>High Profitability / Short-Term Loyalty</small>
+                    <p>Good fit between company offerings and customer needs; high profit potential but temporary[cite: 1].</p>
+                </div>
+                <div class="matrix-card true-friend">
+                    <h4>True Friends</h4>
+                    <small>High Profitability / Long-Term Loyalty</small>
+                    <p>Strong fit; highest profit potential and strong loyal patronage[cite: 1].</p>
+                </div>
+                <div class="matrix-card stranger">
+                    <h4>Strangers</h4>
+                    <small>Low Profitability / Short-Term Loyalty</small>
+                    <p>Little fit between company offerings and needs; make no investments in them[cite: 1].</p>
+                </div>
+                <div class="matrix-card barnacle">
+                    <h4>Barnacles</h4>
+                    <small>Low Profitability / Long-Term Loyalty</small>
+                    <p>Limited fit; highly loyal but low spending; requires management[cite: 1].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 28. MINI ANIMATED VIDEO SIMULATIONS -->
+        <section id="simulations" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-film"></i> Interactive Video Animations</h2>
+                <p>Select a mini animation module below to view short visual concepts.</p>
+            </div>
+            <div class="video-player-container card card-glass">
+                <div class="video-nav">
+                    <button class="vbtn active" onclick="loadVideo(0)">1. How Marketing Creates Value</button>
+                    <button class="vbtn" onclick="loadVideo(1)">2. 5 Steps Process</button>
+                    <button class="vbtn" onclick="loadVideo(2)">3. Needs → Wants → Demands</button>
+                    <button class="vbtn" onclick="loadVideo(3)">4. Customer Lifetime Value Flow</button>
+                </div>
+                <div class="video-screen" id="videoScreen">
+                    <!-- Visual Canvas / Dynamic Elements -->
+                </div>
+                <div class="video-controls">
+                    <button class="btn btn-secondary" id="vidPlayBtn"><i class="fa-solid fa-play"></i> Play</button>
+                    <button class="btn btn-secondary" id="vidPauseBtn"><i class="fa-solid fa-pause"></i> Pause</button>
+                    <button class="btn btn-secondary" id="vidResetBtn"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                    <span class="video-timer" id="vidTimer">00:00 / 00:20</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 27. REAL-WORLD MINI CASE STUDIES -->
+        <section id="cases" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-briefcase"></i> Real-World Mini Case Studies</h2>
+                <p>Test your conceptual understanding against real market scenarios[cite: 1].</p>
+            </div>
+            <div class="grid-2" id="casesContainer">
+                <!-- Mini cases dynamically rendered -->
+            </div>
+        </section>
+
+        <!-- 30. FLASHCARDS -->
+        <section id="flashcards" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-clone"></i> Key Concept Flashcards</h2>
+                <p>Click any card to flip between definition and real-world example.</p>
+            </div>
+            <div class="flashcard-controls">
+                <button class="btn btn-secondary" onclick="prevCard()"><i class="fa-solid fa-arrow-left"></i> Prev</button>
+                <span id="cardIndexDisplay">Card 1 / 15</span>
+                <button class="btn btn-secondary" onclick="nextCard()">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="flashcard-stage">
+                <div class="flashcard" id="flashcard" onclick="flipCard()">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front" id="cardFront">
+                            <h3>Loading...</h3>
+                        </div>
+                        <div class="flashcard-back" id="cardBack">
+                            <p>Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 29. QUICK QUIZ -->
+        <section id="quiz" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-pen-to-square"></i> Chapter 1 Assessment Quiz</h2>
+                <p>15 Questions based strictly on Kotler & Armstrong Chapter 1 content[cite: 1].</p>
+            </div>
+            <div class="quiz-container card card-glass" id="quizContainer">
+                <div class="quiz-header">
+                    <div class="quiz-progress-bar"><div id="quizBar" class="quiz-progress-fill"></div></div>
+                    <span id="quizQuestionCount">Question 1 of 15</span>
+                </div>
+                <div class="quiz-body" id="quizBody">
+                    <!-- Dynamic Question Content -->
+                </div>
+                <div class="quiz-footer">
+                    <button id="nextQuestionBtn" class="btn btn-primary" style="display:none;" onclick="nextQuestion()">Next Question <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 31 & 32. SUMMARY & SEARCHABLE GLOSSARY -->
+        <section id="glossary" class="section">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-book"></i> Glossary & Mindmap</h2>
+                <p>Search key definitions or review the chapter mindmap.</p>
+            </div>
+            
+            <div class="mindmap-container card card-glass">
+                <h3>Chapter 1 Mindmap Summary</h3>
+                <div class="mindmap-tree">
+                    <div class="mm-root">MARKETING (Ch 1)</div>
+                    <div class="mm-branches">
+                        <div class="mm-branch">Needs, Wants & Demands</div>
+                        <div class="mm-branch">5-Step Process</div>
+                        <div class="mm-branch">Management Orientations</div>
+                        <div class="mm-branch">CRM & Customer Equity</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glossary-search-box">
+                <input type="text" id="glossarySearch" placeholder="Search key terms (e.g., Myopia, CRM, Equity)..." onkeyup="filterGlossary()">
+            </div>
+            <div class="glossary-grid" id="glossaryGrid">
+                <!-- Dynamically rendered terms -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>MARKETING Ch 1</h4>
+                <p>Creating Customer Value & Engagement[cite: 1]</p>
+                <small>Computer Science Applications • Based on Kotler & Armstrong[cite: 1]</small>
+            </div>
+            <div>
+                <a href="#hero" class="btn btn-secondary btn-sm"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
